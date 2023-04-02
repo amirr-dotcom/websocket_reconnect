@@ -1,8 +1,8 @@
 name: websocket_reconnect
 description: A new Flutter plugin project.
 version: 0.0.1
-repository: 
-homepage: null
+repository: https://github.com/gvjkumar2004/websocket_reconnect.git
+homepage: http://www.thinkprosystems.com
 
 environment:
   sdk: '>=2.19.2 <3.0.0'
