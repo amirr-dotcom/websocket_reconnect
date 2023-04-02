@@ -3,12 +3,19 @@ import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:web_socket_channel/io.dart';
 import 'package:web_socket_channel/web_socket_channel.dart';
 export 'websocket_reconnect.dart';
+import 'websocket_reconnect.dart';
+import 'dart:io' show Platform;
 
-class WebSocketChannelExt {
+
+class WebsocketReconnect {
   final String url;
   final Duration delay;
 
-  WebSocketChannelExt({required this.url, required this.delay});
+  WebsocketReconnect({required this.url, required this.delay});
+
+  Future<String> getPlatformVersion() async {
+    return await Platform.operatingSystemVersion;
+  }
 
   Future<void> scheduleReconnect() async {
     while (true) {

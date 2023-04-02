@@ -59,12 +59,12 @@ class _CounterPageState extends State<CounterPage> {
       print('WebSocket error: $error');
       _isConnected = false;
       _showConnectionLostDialog();
-      WebSocketChannelExt(url: url, delay: delay).scheduleReconnect();
+      WebsocketReconnect(url: url, delay: delay).scheduleReconnect();
     }, onDone: () {
       print('WebSocket done');
       _isConnected = false;
       _showConnectionLostDialog();
-      WebSocketChannelExt(url: url, delay: delay).scheduleReconnect();
+      WebsocketReconnect(url: url, delay: delay).scheduleReconnect();
     }, cancelOnError: true);
 
     _channel = channel;
